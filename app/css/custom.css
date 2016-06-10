@@ -1,0 +1,5 @@
+.box{background: #000; color: #fff;}
+.box span{background: blue; position: absolute; left: 50%; top: 50%; height: 100%; transform: translate(-50%);}
+
+input.ng-invalid{border-color: red;}
+.help-block{color: red;}

@@ -1,0 +1,115 @@
+<div class="row">
+    <div class="jumbotron text-center">
+        <h1>Contact Page</h1>
+        <p>{{ message }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-8">
+        <form class="form-horizontal" name="userForm" ng-submit="submitForm(userForm.$Invalid)" novalidate>
+            <div class="form-group">
+                <label for="firstName" class="col-sm-2 control-label">First Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="firstName" id="name" placeholder="first Name" ng-model="name" ng-model="contactForm.firstName" required>
+                </div>
+            </div>
+            <div class="help-block" ng-messages="userForm.firstName.$error && userForm.firstName.$dirty ">
+                <div ng-messages-include="./views/messages.html"></div>
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="col-sm-2 control-label">Last Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name"  ng-model="contactForm.lastName" ng-model-options="{ updateOn: 'blur' }" required>
+                </div>
+            </div>
+            <div class="help-block" ng-messages="userForm.lastName.$error">
+                <div ng-messages-include="./views/messages.html"></div>
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="col-sm-2 control-label">Gender:</label>
+                <div class="col-sm-10">
+                    <label class="radio">
+                        <input type="radio" name="Gender" id="inlineRadio1" value="Male" ng-model="contactForm.Gender" required> Male
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="Gender" id="inlineRadio2" value="Female" ng-model="contactForm.Gender" required> Female
+                    </label>
+                </div>
+            </div>
+            <div class="help-block" ng-messages="userForm.Gender.$error">
+                <div ng-messages-include="./views/messages.html"></div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" ng-model="contactForm.email" required>
+                </div>
+            </div>
+            <div class="help-block" ng-messages="userForm.email.$error">
+                <div ng-messages-include="./views/messages.html"></div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" name="password" id="inputPassword3" placeholder="Password" ng-model="contactForm.password" required>
+                </div>
+            </div>
+            <div class="help-block" ng-messages="userForm.password.$error">
+                <div ng-messages-include="./views/messages.html"></div>
+            </div>
+            <div class="form-group">
+                <label for="dob" class="col-sm-2 control-label">Birth Date:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="dateofbirth" id="dob" placeholder="Date" ng-model="contactForm.dateofbirth" required>
+                </div>
+            </div>
+            <div class="help-block" ng-messages="userForm.dateofbirth.$error">
+                <div ng-messages-include="./views/messages.html"></div>
+            </div>
+            <div class="form-group">
+                <label for="yourBrowser" class="col-sm-2 control-label">Your Browser:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="yourBrowser" name="browser" ng-model="contactForm.browser" required>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="help-block" ng-messages="userForm.browser.$error">
+                <div ng-messages-include="./views/messages.html"></div>
+            </div>
+            <div class="form-group">
+                <label for="comment" class="col-sm-2 control-label">Additional Comments:</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" rows="3" name="comment" ng-model="contactForm.comment" required></textarea>
+                </div>
+            </div>
+            <div class="help-block" ng-messages="userForm.comment.$error">
+                <div ng-messages-include="./views/messages.html"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="term" ng-model="contactForm.term" required> I accept the terms and conditions.
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="help-block" ng-messages="userForm.term.$error">
+                <div ng-messages-include="./views/messages.html"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            <div class="form-group">
+                {{contactForm | json}}
+            </div>
+        </form>
+    </div>
+</div>

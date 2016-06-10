@@ -1,0 +1,49 @@
+[{
+    "name": "Dodecahedron",
+    "price": 2.95,
+    "description": "A",
+    "canPurchase": true
+},
+ {
+     "name": "Dodecahedron",
+     "price": 3.95,
+     "description": "B",
+     "canPurchase": false
+ },
+ {
+     "name": "Dodecahedron",
+     "price": 4.95,
+     "description": "C",
+     "canPurchase": true
+ },
+ {
+     "name": "Dodecahedron",
+     "price": 5.95,
+     "description": "D",
+     "canPurchase": false
+ },
+ {
+     "name": "Dodecahedron",
+     "price": 2.95,
+     "description": "E",
+     "canPurchase": true
+ },
+ {
+     "name": "Dodecahedron",
+     "price": 3.95,
+     "description": "F",
+     "canPurchase": false
+ },
+ {
+     "name": "Dodecahedron",
+     "price": 4.95,
+     "description": "G",
+     "canPurchase": true
+ },
+ {
+     "name": "Dodecahedron",
+     "price": 5.95,
+     "description": "H",
+     "canPurchase": false
+ }
+]
